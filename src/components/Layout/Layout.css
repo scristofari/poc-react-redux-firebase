@@ -1,0 +1,22 @@
+.layout {
+    background-color: #343635;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.layout--init {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.layout--center--logo {
+  animation: spinnerInit infinite 10s linear;
+  height: 80px;
+}
+
+@keyframes spinnerInit {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

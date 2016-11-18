@@ -1,16 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Router, Route, browserHistory } from 'react-router';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
 
-import Home from './modules/Home/Home';
-import About from './modules/About/About';
+import Layout from './components/Layout/Layout'
+import store from './store'
 
-import './index.css';
+const app = document.getElementById('root')
 
-ReactDOM.render(
-  <Router history={browserHistory}>
-    <Route path="/" component={Home}/>
-    <Route path="/about" component={About}/>
-  </Router>
-  , document.getElementById('root')
-)
+ReactDOM.render(<Provider store={store}><Layout /></Provider>, app)
